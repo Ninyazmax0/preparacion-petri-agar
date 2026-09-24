@@ -98,6 +98,24 @@
   }
   .chip{background:#fff;border:2px solid var(--line);border-radius:999px;padding:4px 12px 2px;font-size:clamp(11px,1.05vw,13.5px);font-weight:700;box-shadow:3px 3px 0 rgba(52,59,88,.16);}
   .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .team-\boxed{
+    background:#fff;border:2.5px solid var(--line);border-radius:16px;
+    box-shadow:6px 6px 0 rgba(52,59,88,.2);padding:10px 20px 12px;
+    display:flex;flex-direction:column;gap:6px;align-items:center;
+    max-width:min(94%,780px);margin-top:2px;
+  }
+  .team-box .tb-title{
+    font-size:clamp(11px,1vw,13px);font-weight:800;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .team-box .tb-names{
+    display:grid;grid-template-columns:repeat(2,auto);
+    gap:4px clamp(16px,2.4vw,34px);justify-content:center;
+  }
+  .team-box .tb-names span{font-weight:700;font-size:clamp(13px,1.2vw,16px);white-space:nowrap;}
+  .team-box .tb-names b{
+    font-family:"Caveat",cursive;font-size:1.2em;font-weight:700;color:var(--blue);
+  }
 
   .kicker{font-size:clamp(10px,1vw,11.5px);font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:var(--muted);}
   .school{
@@ -361,14 +379,15 @@
           </svg>
         </div>
 
-        <div class="chips" style="justify-content:center;margin-top:4px;">
-          <span class="chip">Equipo:</span>
-          <span class="chip">Jonathan Valle · lista 35</span>
-          <span class="chip">Anderson Raymundo · lista 27</span>
-          <span class="chip">Bryan Monge · lista 12</span>
-          <span class="chip">Daniel Ramírez · lista 30</span>
-          <span class="chip">2.° año · Software B</span>
-          <span class="chip">Steven G. López H. · lista 4</span>
+        <div class="team-box">
+          <span class="tb-title">Equipo · por número de lista</span>
+          <div class="tb-names">
+            <span>Steven Gabriel López Hernández <b>#4</b></span>
+            <span>Bryan José Monge Navas <b>#12</b></span>
+            <span>Anderson Ismael Raymundo Campos <b>#27</b></span>
+            <span>Daniel Ramírez <b>#30</b></span>
+            <span>Jonathan Alberto Valle Torre <b>#35</b></span>
+          </div>
         </div>
       </div>
 
@@ -768,8 +787,8 @@
           </div>
 
           <div class="ev-mini-grid">
-            <div class="ev-mini"><span class="tag">resultado</span><img src="r2.jpeg" alt="Resultado final: fotografía del equipo"><p>La placa, vista de arriba</p></div>
-            <div class="ev-mini"><span class="tag">resultado</span><img src="r3.jpeg" alt="Resultado final: fotografía del equipo"><p>Sellada y etiquetada</p></div>
+            <div class="ev-mini"><span class="tag">resultado</span><img src="r2.jpeg" alt="Resultado final: fotografía del equipo"><p>Sellada y etiquetada</p></div>
+            <div class="ev-mini"><span class="tag">resultado</span><img src="r3.jpeg" alt="Resultado final: fotografía del equipo"><p>La placa, vista de arriba</p></div>
           </div>
 
           <p class="note" style="text-align:center;">
