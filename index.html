@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Preparación de cajas de Petri con ágar — Presentación</title>
+<title>Preparación de cajas de Petri con ágar - Presentación</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
@@ -98,7 +98,7 @@
   }
   .chip{background:#fff;border:2px solid var(--line);border-radius:999px;padding:4px 12px 2px;font-size:clamp(11px,1.05vw,13.5px);font-weight:700;box-shadow:3px 3px 0 rgba(52,59,88,.16);}
   .chips{display:flex;flex-wrap:wrap;gap:8px;}
-  .team-\boxed{
+  .team-box{
     background:#fff;border:2.5px solid var(--line);border-radius:16px;
     box-shadow:6px 6px 0 rgba(52,59,88,.2);padding:10px 20px 12px;
     display:flex;flex-direction:column;gap:6px;align-items:center;
@@ -124,7 +124,7 @@
     box-shadow:6px 6px 0 rgba(52,59,88,.18);
   }
   .slide-title{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(30px,4.6vw,58px);line-height:1.02;color:var(--fg);}
-  .lede{font-size:clamp(13px,1.35vw,16.5px);color:var(--muted);font-weight:600;max-width:64ch;}
+  .lede{font-size:clamp(13px,1.35vw,16.5px);color:var(--muted);font-weight:600;max-width:68ch;}
   .lede b{color:var(--fg);}
   .note{font-size:clamp(11.5px,1.15vw,14px);color:var(--muted);font-weight:600;max-width:78ch;}
 
@@ -133,7 +133,7 @@
   .divider .ln{flex:1;border-top:2.5px dashed rgba(52,59,88,.4);}
 
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.3vw,18px);}
-  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.2vw,16px);}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,1.1vw,15px);}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,28px);}
 
   .card{
@@ -201,8 +201,6 @@
   .postit.b{background:var(--night-cyan);color:#06252c;transform:rotate(-3deg);}
   .postit.m{background:var(--night-magenta);color:#2c1b4d;transform:rotate(2deg);}
 
-  .sticker{position:absolute;z-index:4;line-height:1;}
-
   .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,34px);align-items:start;}
 
   /* evidencia */
@@ -234,7 +232,7 @@
   .ev-mini{
     border:2px dashed rgba(52,59,88,.45);border-radius:12px;
     background:var(--card2);
-    padding:10px 10px 8px;text-align:center;
+    padding:8px;text-align:center;
     display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;
     min-height:clamp(64px,9vh,86px);
   }
@@ -244,7 +242,6 @@
     padding:2px 10px 0;box-shadow:2px 2px 0 rgba(52,59,88,.14);
   }
   .ev-mini p{font-size:clamp(10px,1vw,12.5px);color:var(--muted);font-weight:700;line-height:1.25;}
-  .ev-mini{padding:8px;}
   .ev-mini img{
     display:block;width:100%;height:clamp(78px,11vh,120px);
     object-fit:cover;border:1.5px solid var(--line);border-radius:8px;background:var(--card2);
@@ -285,7 +282,7 @@
     .paper{padding:18px 16px;overflow-y:auto;}
   }
 
-  /* ===== Slides 2-10: el contenido llena la tarjeta automaticamente ===== */
+  /* Adapting cards to slide container */
   .slide + .slide .paper > .grid2,
   .slide + .slide .paper > .grid3,
   .slide + .slide .paper > .grid4,
@@ -306,18 +303,23 @@
   .slide + .slide .split > div > .ley{flex:1 1 auto;}
   .slide + .slide .split .mats li{flex:1 1 auto;align-items:center;}
 
-  /* ===== Slides 2-10: texto a la escala de las tarjetas ===== */
-  .slide + .slide .split p{font-size:clamp(14.5px,1.5vw,18.5px);line-height:1.45;}
-  .slide + .slide .card{padding:clamp(16px,1.8vw,24px);}
-  .slide + .slide .card h3{font-size:clamp(22px,2.4vw,31px);}
-  .slide + .slide .card p{font-size:clamp(14.5px,1.5vw,19px);line-height:1.42;}
-  .slide + .slide .ley{padding:clamp(12px,1.4vw,18px) clamp(14px,1.6vw,20px);}
-  .slide + .slide .ley p{font-size:clamp(14.5px,1.5vw,19px);line-height:1.42;}
-  .slide + .slide .ley .num{width:clamp(40px,4vw,52px);height:clamp(40px,4vw,52px);font-size:clamp(20px,2.2vw,29px);}
-  .slide + .slide .mats li{font-size:clamp(14px,1.5vw,18.5px);line-height:1.35;padding:clamp(10px,1.1vw,15px) clamp(12px,1.3vw,17px);gap:12px;}
-  .slide + .slide .mats .tick{width:26px;height:26px;font-size:14px;}
+  /* General typography scaling */
+  .slide + .slide .split p{font-size:clamp(13px,1.35vw,17px);line-height:1.38;}
+  .slide + .slide .card{padding:clamp(13px,1.5vw,20px);}
+  .slide + .slide .card h3{font-size:clamp(19px,2.1vw,27px);}
+  .slide + .slide .card p{font-size:clamp(13px,1.35vw,17px);line-height:1.38;}
+  .slide + .slide .ley{padding:clamp(10px,1.2vw,16px) clamp(12px,1.4vw,18px);}
+  .slide + .slide .ley p{font-size:clamp(13px,1.35vw,17px);line-height:1.38;}
+  .slide + .slide .ley .num{width:clamp(38px,3.8vw,48px);height:clamp(38px,3.8vw,48px);font-size:clamp(18px,2vw,26px);}
+  .slide + .slide .mats li{font-size:clamp(12.5px,1.3vw,16px);line-height:1.3;padding:clamp(7px,.9vw,12px) clamp(10px,1.1vw,14px);gap:10px;}
+  .slide + .slide .mats .tick{width:22px;height:22px;font-size:12px;}
   .slide + .slide .ev-mini p{font-size:clamp(12px,1.25vw,16px);}
-  .slide + .slide .lede{font-size:clamp(15px,1.6vw,19.5px);}
+  .slide + .slide .lede{font-size:clamp(13.5px,1.45vw,18px);}
+
+  /* Grid 4 specific optimizations */
+  .slide + .slide .grid4 .card{padding:clamp(10px,1.1vw,15px);}
+  .slide + .slide .grid4 .card h3{font-size:clamp(16px,1.7vw,22px);line-height:1.08;margin-top:4px;}
+  .slide + .slide .grid4 .card p{font-size:clamp(11.8px,1.1vw,14px);line-height:1.32;margin-top:4px;}
 </style>
 </head>
 <body>
@@ -334,12 +336,12 @@
 
       <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:1.2vh;flex:1;justify-content:center;position:relative;z-index:2;">
         <span class="school">INSAM · Ciencia y Tecnología II</span>
-        <div class="kicker" style="margin-top:8px;">Tarea grupal · Tema 01 · Entrega 24 sep 2026</div>
+        <div class="kicker" style="margin-top:8px;">Proyecto Experimental · Ciencia y Tecnología II</div>
         <h1 class="slide-title" style="font-size:clamp(34px,5.6vw,72px);max-width:16ch;">
           Preparación de cajas de <span class="hl">Petri</span> con <span class="hl g">ágar</span>
         </h1>
-        <p class="lede" style="text-align:center;max-width:52ch;">
-          Nuestro proceso, paso a paso: lo que hicimos, qué pasó y cómo nos quedó.
+        <p class="lede" style="text-align:center;max-width:54ch;">
+          Cultivo artesanal de bacterias a partir de una muestra de llaves: fundamentos, proceso y evidencia.
         </p>
 
         <div style="display:flex;justify-content:center;align-items:flex-end;gap:clamp(14px,2vw,30px);margin-top:6px;">
@@ -395,7 +397,7 @@
     </div>
   </div>
 
-  <!-- 02 · OBJETIVO -->
+  <!-- 02 · CONTEXTO 1 -->
   <div class="slide">
     <div class="paper">
       <span class="corner c-tl"></span><span class="corner c-tr"></span>
@@ -403,101 +405,50 @@
 
       <div class="head-row">
         <div>
-          <div class="kicker">01 · Nuestro objetivo</div>
-          <h1 class="slide-title">El plan del <span class="hl b">equipo</span></h1>
+          <div class="kicker">01 · Fundamento Biológico</div>
+          <h1 class="slide-title">Biotecnología y <span class="hl b">cultivo</span></h1>
         </div>
-        <span class="label" style="background:var(--night-blue);">Tema 01</span>
+        <span class="label" style="background:var(--night-blue);">Introducción</span>
       </div>
-      <div class="divider"><span>antes de tocar nada</span><span class="ln"></span></div>
+      <div class="divider"><span>la ciencia de multiplicar la vida microscópica</span><span class="ln"></span></div>
 
       <p class="lede">
-        Primero leímos el material de clase y quedó claro: <b>cultivar</b> es propagar
-        microorganismos dándoles condiciones adecuadas. Entonces nos propusimos hacerlo nosotros:
-        preparar cajas de Petri con ágar casero y sembrar una muestra.
+        La <b>biotecnología microbiana</b> utiliza el metabolismo de microorganismos en la medicina, industria y ambiente. 
+        Para estudiarlos, aislarlos y aprovecharlos, el primer paso indispensable es el <b>cultivo</b>.
       </p>
 
       <div class="grid3" style="margin-top:6px;">
         <div class="card">
-          <span class="badge" style="background:var(--night-green);">nuestra meta</span>
-          <h3>Preparar y cultivar</h3>
-          <p>Hacer un medio de cultivo sólido, sembrar una muestra del entorno y ver crecer las colonias en unos días.</p>
+          <span class="badge" style="background:var(--night-green);">concepto</span>
+          <h3>¿Qué es un cultivo?</h3>
+          <p>Es el proceso controlado de propagar microorganismos en el laboratorio, garantizándoles condiciones ambientales (temperatura, pH, oxígeno) y nutrientes asimilables.</p>
         </div>
         <div class="card">
-          <span class="badge" style="background:var(--night-cyan);">lectura</span>
-          <h3>Lo que leímos</h3>
-          <p>Tema 01: las bacterias necesitan nutrientes (carbono, nitrógeno, azufre, fósforo…), pH y temperatura adecuados para crecer.</p>
+          <span class="badge" style="background:var(--night-cyan);">bioquímica</span>
+          <h3>Requerimientos vitales</h3>
+          <p>El peso seco microbiano exige Carbono, Hidrógeno, Nitrógeno, Oxígeno, Fósforo y Azufre (CHNOPS) para sintetizar proteínas, ácidos nucleicos y ATP energético.</p>
         </div>
         <div class="card">
-          <span class="badge" style="background:var(--night-magenta);">receta</span>
-          <h3>Receta casera</h3>
-          <p>240 ml de agua + ½ cubito de caldo + gelatina o ágar-agar. Sin laboratorio, en la cocina de casa.</p>
-        </div>
-      </div>
-
-      <div class="foot-meta">
-        <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
-      </div>
-      <span class="postit b" style="bottom:64px;right:22px;">plan listo<br>¡a cocinar!</span>
-    </div>
-  </div>
-
-  <!-- 03 · REGLAS DEL EQUIPO -->
-  <div class="slide">
-    <div class="paper">
-      <span class="corner c-tl"></span><span class="corner c-tr"></span>
-      <span class="corner c-bl"></span><span class="corner c-br"></span>
-
-      <div class="head-row">
-        <div>
-          <div class="kicker">02 · Cómo trabajamos</div>
-          <h1 class="slide-title">Las reglas que nos <span class="hl">impusimos</span></h1>
-        </div>
-        <svg width="74" height="74" viewBox="0 0 90 90" class="spin">
-          <ellipse cx="45" cy="45" rx="36" ry="34" fill="#eaf6e0" stroke="#343b58" stroke-width="3"/>
-          <ellipse cx="45" cy="45" rx="29" ry="27" fill="#f4fbe9" stroke="#485e30" stroke-width="2"/>
-          <circle cx="36" cy="38" r="5.5" fill="#9ece6a" stroke="#485e30" stroke-width="1.8"/>
-          <circle cx="54" cy="48" r="4.5" fill="#e0af68" stroke="#8f5e15" stroke-width="1.8"/>
-          <circle cx="42" cy="56" r="3.5" fill="#bb9af7" stroke="#5a4a78" stroke-width="1.6"/>
-        </svg>
-      </div>
-      <div class="divider"><span>así lo hicimos nosotros</span><span class="ln"></span></div>
-
-      <div class="grid4" style="margin-top:6px;">
-        <div class="card">
-          <span class="badge" style="background:var(--night-red);">cuidado</span>
-          <h3>Todo estéril</h3>
-          <p>Lavamos manos, mesa y recipientes; los frascos pasaron por agua hirviendo. Si entra otra bacteria, arruina el cultivo.</p>
-        </div>
-        <div class="card">
-          <span class="badge" style="background:var(--night-blue);">hisopo</span>
-          <h3>Poliéster, no algodón</h3>
-          <p>Usamos hisopos estériles de poliéster o dacrón: el algodón tiene ácidos grasos que inhiben el crecimiento.</p>
-        </div>
-        <div class="card">
-          <span class="badge" style="background:var(--night-cyan);">boca abajo</span>
-          <h3>Siempre del revés</h3>
-          <p>Guardamos e incubamos las placas boca abajo para que la condensación de la tapa no gotee sobre el ágar.</p>
-        </div>
-        <div class="card">
-          <span class="badge" style="background:var(--night-magenta);">por qué ágar</span>
-          <h3>Aguanta el hervor</h3>
-          <p>Elegimos ágar: se licúa cerca de 100 °C y gelifica cerca de 40 °C — perfecto para hervirlo y que cuaje.</p>
+          <span class="badge" style="background:var(--night-magenta);">fisiología</span>
+          <h3>Iones esenciales</h3>
+          <p>Se requieren cationes como K+, Na+, Mg2+, Ca2+ y Fe para facilitar la catálisis de enzimas y mantener el gradiente electroquímico de la membrana celular.</p>
         </div>
       </div>
 
       <div class="chips" style="margin-top:12px;">
-        <span class="chip">lavamos antes de empezar</span>
-        <span class="chip">abrimos lo mínimo la caja</span>
-        <span class="chip">etiqueta con fecha y fuente</span>
+        <span class="chip">CHNOPS celular</span>
+        <span class="chip">síntesis de ATP y biomasa</span>
+        <span class="chip">control de pH, temperatura y humedad</span>
       </div>
 
       <div class="foot-meta">
         <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
       </div>
+      <span class="postit b" style="bottom:64px;right:22px;">nutrición y<br>metabolismo</span>
     </div>
   </div>
 
-  <!-- 04 · MATERIALES -->
+  <!-- 03 · CONTEXTO 2 -->
   <div class="slide">
     <div class="paper">
       <span class="corner c-tl"></span><span class="corner c-tr"></span>
@@ -505,155 +456,89 @@
 
       <div class="head-row">
         <div>
-          <div class="kicker">03 · Materiales</div>
-          <h1 class="slide-title">Lo que <span class="hl g">juntamos</span></h1>
+          <div class="kicker">02 · Principios de Cultivo</div>
+          <h1 class="slide-title">¿Por qué placas de <span class="hl">Petri</span>?</h1>
         </div>
-        <span class="label" style="background:var(--night-green);">checklist</span>
+        <span class="label" style="background:var(--night-magenta);">Medio líquido vs sólido</span>
       </div>
-      <div class="divider"><span>para ~6 placas chicas</span><span class="ln"></span></div>
+      <div class="divider"><span>caldo para multiplicar, placas para aislar</span><span class="ln"></span></div>
 
-      <div class="split" style="flex:1;">
+      <p class="lede">
+        En microbiología existen dos métodos principales de propagación: caldos líquidos y medios sólidos de agar. 
+        Cada uno cumple una función microbiológica irreemplazable:
+      </p>
+
+      <div class="grid3" style="margin-top:6px;">
+        <div class="card">
+          <span class="badge" style="background:var(--night-yellow);color:#3a2a08;">caldo líquido</span>
+          <h3>Multiplicación rápida</h3>
+          <p>Al no tener gelificante, las bacterias nadan libremente y absorben nutrientes sin barreras. Ideal para producir biomasa masiva en poco tiempo.</p>
+        </div>
+        <div class="card">
+          <span class="badge" style="background:var(--night-green);">medio sólido</span>
+          <h3>Aislamiento colonial</h3>
+          <p>El gel inmoviliza cada célula en un punto fijo. Al dividirse, genera una <b>colonia pura visible</b>, permitiendo separar especies de mezclas complejas.</p>
+        </div>
+        <div class="card">
+          <span class="badge" style="background:var(--night-blue);">caja de Petri</span>
+          <h3>Observación y antibióticos</h3>
+          <p>Su vidrio o plástico transparente permite estudiar colonias sin abrir la caja, y probar qué antibióticos inhiben a las bacterias patógenas.</p>
+        </div>
+      </div>
+
+      <div class="chips" style="margin-top:12px;">
+        <span class="chip">caldo = movimiento libre</span>
+        <span class="chip">ágar sólido = colonias aisladas</span>
+        <span class="chip">pruebas de antibiograma</span>
+      </div>
+
+      <div class="foot-meta">
+        <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
+      </div>
+      <span class="postit" style="bottom:64px;right:22px;">¡el caldo multiplica,<br>el ágar aísla!</span>
+    </div>
+  </div>
+
+  <!-- 04 · PROCESO 1: EL MEDIO CASERO -->
+  <div class="slide">
+    <div class="paper">
+      <span class="corner c-tl"></span><span class="corner c-tr"></span>
+      <span class="corner c-bl"></span><span class="corner c-br"></span>
+
+      <div class="head-row">
+        <div>
+          <div class="kicker">03 · Nuestro Proceso · Formulación</div>
+          <h1 class="slide-title">Formulación del <span class="hl g">medio casero</span></h1>
+        </div>
+        <span class="label" style="background:var(--night-green);">formulación sólida</span>
+      </div>
+      <div class="divider"><span>reactivos cotidianos con fundamento científico</span><span class="ln"></span></div>
+
+      <div class="split" style="margin-top:6px;">
         <ul class="mats">
-          <li><span class="tick">✓</span><span><b>1 taza (240 ml)</b> de agua, preferiblemente destilada.</span></li>
-          <li><span class="tick">✓</span><span><b>½ cubito</b> de caldo de pollo o res — aporta los nutrientes.</span></li>
-          <li><span class="tick">✓</span><span><b>7 g de gelatina sin sabor</b> o <b>4 g de agar-agar</b> — gelificante.</span></li>
-          <li><span class="tick">✓</span><span><b>1 cucharadita de azúcar</b> (opcional, alimento extra).</span></li>
-          <li><span class="tick">✓</span><span><b>Recipientes limpios con tapa:</b> cajas Petri o envases pequeños.</span></li>
-          <li><span class="tick">✓</span><span><b>Hisopos estériles</b> de poliéster o dacrón (nada de algodón).</span></li>
+          <li><span class="tick">✓</span><div><b>1 taza (240 ml) de agua destilada</b>: solvente puro sin cloro que altere el pH.</div></li>
+          <li><span class="tick">✓</span><div><b>½ cubito de caldo de pollo o res</b>: fuente primordial de peptonas y sales.</div></li>
+          <li><span class="tick">✓</span><div><b>1 sobre de gelatina (7 g) o 4 g de ágar</b>: matriz polimérica gelificante.</div></li>
+          <li><span class="tick">✓</span><div><b>1 cdta de azúcar</b>: carbohidrato fermentable para energía rápida.</div></li>
+          <li><span class="tick">✓</span><div><b>Recipientes transparentes con tapa</b>: nuestras placas de cultivo caseras.</div></li>
         </ul>
 
-        <div style="display:flex;flex-direction:column;gap:14px;position:relative;">
-          <div class="card" style="transform:rotate(.4deg);">
-            <span class="badge" style="background:var(--night-yellow);color:#3a2a08;">elegimos</span>
-            <h3>Por qué elegimos ágar</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div class="card">
+            <span class="badge" style="background:var(--night-yellow);color:#3a2a08;">¿por qué cubito de caldo?</span>
+            <h3>Peptonas y sales minerales</h3>
             <p>
-              Es un polisacárido de <b style="color:var(--fg);">algas marinas rojas</b> que da solidez al medio.
-              Lo usamos porque su gel se licúa cerca de <b style="color:var(--fg);">100 °C</b> —aguanta el hervor—
-              y gelifica cerca de <b style="color:var(--fg);">40 °C</b> al enfriarse.
+              El extracto de caldo no es sazón: aporta <b>peptonas</b> (proteínas digeridas ricas en nitrógeno) y minerales (Na+, K+, Mg2+) 
+              indispensables para sintetizar macromoléculas y ATP celular.
             </p>
           </div>
-          <div class="card" style="transform:rotate(-.5deg);">
-            <span class="badge" style="background:var(--night-red);">cuidado</span>
-            <h3>Empezamos limpios</h3>
-            <p>Lavamos manos, mesa y recipientes antes de empezar: si entra otra bacteria, contamina todo el cultivo.</p>
-          </div>
-          <svg width="96" height="90" viewBox="0 0 110 100" style="align-self:center;" class="float">
-            <path d="M30 88 C30 70 22 60 22 44 a33 33 0 0 1 66 0 c0 16 -8 26 -8 44" fill="none" stroke="#166775" stroke-width="4" stroke-linecap="round"/>
-            <path d="M40 88 h30" stroke="#166775" stroke-width="4" stroke-linecap="round"/>
-            <path d="M38 40 c6 -8 14 -8 20 0 s14 8 20 0" fill="none" stroke="#7dcfff" stroke-width="4" stroke-linecap="round"/>
-            <ellipse cx="55" cy="74" rx="24" ry="9" fill="#9ece6a" opacity=".85"/>
-            <circle cx="46" cy="70" r="3" fill="#f4fbe9"/><circle cx="60" cy="76" r="2.4" fill="#f4fbe9"/>
-          </svg>
-        </div>
-      </div>
-
-      <div class="foot-meta">
-        <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
-      </div>
-      <span class="postit" style="top:70px;right:24px;">receta casera<br>¡fácil!</span>
-    </div>
-  </div>
-
-  <!-- 05 · PROCEDIMIENTO -->
-  <div class="slide">
-    <div class="paper">
-      <span class="corner c-tl"></span><span class="corner c-tr"></span>
-      <span class="corner c-bl"></span><span class="corner c-br"></span>
-
-      <div class="head-row">
-        <div>
-          <div class="kicker">04 · Proceso · paso a paso</div>
-          <h1 class="slide-title">Cómo lo <span class="hl">elaboramos</span></h1>
-        </div>
-        <span class="label" style="background:var(--night-magenta);">pasos a – f</span>
-      </div>
-      <div class="divider"><span>en la cocina de casa</span><span class="ln"></span></div>
-
-      <div class="steps2" style="margin-top:4px;">
-        <div class="ley">
-          <span class="num" style="background:var(--night-blue);">a</span>
-          <p><b>Hervimos el agua.</b> Hervimos la taza de agua con el ½ cubito de caldo y el azúcar hasta que se disolvieron por completo.</p>
-        </div>
-        <div class="ley">
-          <span class="num" style="background:var(--night-green);">b</span>
-          <p><b>Agregamos el gelificante.</b> Echamos la gelatina o el ágar y revolvimos 2–3 min a fuego lento: notamos que no quedaron grumos y dejamos hervir un momento.</p>
-        </div>
-        <div class="ley">
-          <span class="num" style="background:var(--night-cyan);">c</span>
-          <p><b>Esterilizamos los recipientes.</b> Pasamos los frascos por agua hirviendo unos minutos para matar las bacterias de fuera.</p>
-        </div>
-        <div class="ley">
-          <span class="num" style="background:var(--night-yellow);color:#3a2a08;">d</span>
-          <p><b>Vertimos la mezcla.</b> Llenamos el fondo de cada caja con una capa fina de <b>3 a 5 mm</b>, con cuidado de no salpicar.</p>
-        </div>
-        <div class="ley">
-          <span class="num" style="background:var(--night-magenta);">e</span>
-          <p><b>Tapamos y enfriamos.</b> Tapamos de inmediato y esperamos: en unos 30 min ya estaba sólida — la inclinamos y no se movió.</p>
-        </div>
-        <div class="ley">
-          <span class="num" style="background:var(--night-red);">f</span>
-          <p><b>Guardamos.</b> Dejamos las placas <b>boca abajo</b> en una bolsa limpia hasta el hisopado.</p>
-        </div>
-      </div>
-
-      <div class="foot-meta">
-        <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
-      </div>
-      <span class="postit b" style="bottom:66px;right:20px;">gelificó en<br>~30 min</span>
-    </div>
-  </div>
-
-  <!-- 06 · HISOPADO -->
-  <div class="slide">
-    <div class="paper">
-      <span class="corner c-tl"></span><span class="corner c-tr"></span>
-      <span class="corner c-bl"></span><span class="corner c-br"></span>
-
-      <div class="head-row">
-        <div>
-          <div class="kicker">05 · Siembra · lo que hicimos</div>
-          <h1 class="slide-title">Hisopamos la <span class="hl b">muestra</span></h1>
-        </div>
-        <svg width="66" height="86" viewBox="0 0 80 110" class="float">
-          <ellipse cx="40" cy="24" rx="18" ry="22" fill="#fff" stroke="#343b58" stroke-width="3.2"/>
-          <path d="M27 16 q5 -7 12 -6 M29 28 q7 6 16 3 M48 15 q6 5 4 12" stroke="#c9cad2" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <circle cx="40" cy="22" r="2.2" fill="#9ece6a"/>
-          <circle cx="33" cy="30" r="1.8" fill="#9ece6a"/>
-          <circle cx="48" cy="26" r="1.6" fill="#e0af68"/>
-          <rect x="34" y="42" width="12" height="62" rx="6" fill="#f2e6cf" stroke="#343b58" stroke-width="3"/>
-        </svg>
-      </div>
-      <div class="divider"><span>así tomamos la muestra</span><span class="ln"></span></div>
-
-      <div class="split" style="margin-top:4px;">
-        <div style="display:flex;flex-direction:column;gap:12px;">
-          <p class="lede">
-            Elegimos hisopar unas <b>llaves</b>. Con las manos limpias, pasamos el hisopo de
-            poliéster por toda la superficie, con cuidado de tocarla bien.
-          </p>
-          <p class="lede">
-            Luego sembramos sobre el ágar en <b>línea zigzag</b>, abriendo la caja lo mínimo
-            posible para no dejar entrar bacterias de más.
-          </p>
-          <div class="chips">
-            <span class="chip">zigzag</span>
-            <span class="chip">poca apertura</span>
-            <span class="chip">manos limpias</span>
-          </div>
-          <span class="postit m" style="position:relative;align-self:flex-start;margin-top:4px;">Así tomamos<br>nuestra muestra</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;">
-          <div class="ley">
-            <span class="num" style="background:var(--night-blue);">1</span>
-            <p><b>Hisopo de poliéster.</b> Nada de algodón: sus ácidos grasos inhiben el crecimiento de las bacterias.</p>
-          </div>
-          <div class="ley">
-            <span class="num" style="background:var(--night-green);">2</span>
-            <p><b>Hisopo estérile.</b> Usamos uno estérile para no meter bacterias de fuera en nuestra muestra.</p>
-          </div>
-          <div class="ley">
-            <span class="num" style="background:var(--night-cyan);">3</span>
-            <p><b>Etiqueta.</b> Sellamos y etiquetamos al instante con la fecha 23/09/26 y la fuente: llaves.</p>
+          <div class="card">
+            <span class="badge" style="background:var(--night-blue);">hervor y vertido</span>
+            <h3>Esterilización y vaciado</h3>
+            <p>
+              Disolvimos a fuego lento 2–3 min sin grumos. Pasamos los recipientes por agua hirviendo y vertimos una fina película 
+              de <b>3 a 5 mm</b>, tapando de inmediato.
+            </p>
           </div>
         </div>
       </div>
@@ -661,10 +546,11 @@
       <div class="foot-meta">
         <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
       </div>
+      <span class="postit" style="bottom:64px;right:22px;">cuajó firme en<br>~30 minutos</span>
     </div>
   </div>
 
-  <!-- 07 · INCUBACIÓN -->
+  <!-- 05 · PROCESO 2: SIEMBRA EN LLAVES -->
   <div class="slide">
     <div class="paper">
       <span class="corner c-tl"></span><span class="corner c-tr"></span>
@@ -672,44 +558,92 @@
 
       <div class="head-row">
         <div>
-          <div class="kicker">06 · Incubación</div>
-          <h1 class="slide-title">Incubamos y <span class="hl g">esperamos</span></h1>
+          <div class="kicker">04 · Nuestro Proceso · Toma de Muestra</div>
+          <h1 class="slide-title">Hisopado de unas <span class="hl b">llaves</span></h1>
         </div>
-        <span class="label" style="background:var(--night-yellow);color:#3a2a08;">24–72 h</span>
+        <span class="label" style="background:var(--night-blue);">fuente: llaves</span>
       </div>
-      <div class="divider"><span>lo que pasó en los días siguientes</span><span class="ln"></span></div>
+      <div class="divider"><span>cómo recolectamos y sembramos las bacterias</span><span class="ln"></span></div>
+
+      <div class="grid3" style="margin-top:6px;">
+        <div class="card">
+          <span class="badge" style="background:var(--night-magenta);">la fuente</span>
+          <h3>¿Por qué unas llaves?</h3>
+          <p>Elegimos unas llaves de uso cotidiano: están expuestas a bolsillos, dinero, mesas y contacto manual continuo, convirtiéndose en un portador ideal de microbios del entorno.</p>
+        </div>
+        <div class="card">
+          <span class="badge" style="background:var(--night-blue);">hisopado</span>
+          <h3>Hisopo sintético estéril</h3>
+          <p>Usamos hisopos estériles de poliéster. Es fundamental evitar el algodón común, ya que desprende ácidos grasos libres que inhiben e intoxican el crecimiento bacteriano.</p>
+        </div>
+        <div class="card">
+          <span class="badge" style="background:var(--night-green);">siembra</span>
+          <h3>Estrías en zigzag</h3>
+          <p>Abrimos la placa lo mínimo para no dejar entrar esporas del aire y deslizamos el hisopo en zigzag suave sobre el ágar para dispersar células individuales sin romper el gel.</p>
+        </div>
+      </div>
+
+      <div class="chips" style="margin-top:12px;">
+        <span class="chip">frotado exhaustivo del metal</span>
+        <span class="chip">poliéster inerte bacteriano</span>
+        <span class="chip">siembra en zigzag suave</span>
+        <span class="chip">sellado y rotulado: 23/09/26</span>
+      </div>
+
+      <div class="foot-meta">
+        <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
+      </div>
+      <span class="postit b" style="bottom:64px;right:22px;">placa sellada<br>y rotulada</span>
+    </div>
+  </div>
+
+  <!-- 06 · PROCESO 3: INCUBACIÓN -->
+  <div class="slide">
+    <div class="paper">
+      <span class="corner c-tl"></span><span class="corner c-tr"></span>
+      <span class="corner c-bl"></span><span class="corner c-br"></span>
+
+      <div class="head-row">
+        <div>
+          <div class="kicker">05 · Nuestro Proceso · Incubación</div>
+          <h1 class="slide-title">Incubación y <span class="hl m">monitoreo</span></h1>
+        </div>
+        <span class="label" style="background:var(--night-magenta);">24 – 72 horas</span>
+      </div>
+      <div class="divider"><span>condiciones para que la muestra prospere</span><span class="ln"></span></div>
 
       <div class="grid3" style="margin-top:6px;">
         <div class="card">
           <span class="badge" style="background:var(--night-red);">temperatura</span>
-          <h3>Lugar cálido y oscuro</h3>
-          <p>Dejamos las placas boca abajo en un rincón de <b>25 a 37 °C</b>, lejos de la luz directa.</p>
+          <h3>25 °C a 37 °C en penumbra</h3>
+          <p>Colocamos la caja sellada en un espacio cálido y sin luz solar directa. El rango térmico activa la cinética enzimática acelerando la división celular bacteriana.</p>
         </div>
         <div class="card">
-          <span class="badge" style="background:var(--night-blue);">tiempo</span>
-          <h3>24 a 72 horas</h3>
-          <p>Miramos las placas cada día: cada célula que sobrevivió forma una colonia visible — millones juntas.</p>
+          <span class="badge" style="background:var(--night-cyan);">regla de oro</span>
+          <h3>Siempre boca abajo</h3>
+          <p>Al calentarse, el medio evapora humedad. Si estuviera al derecho, las gotas gotearían sobre el ágar y desparramarían las bacterias en una sopa indistinguible.</p>
         </div>
         <div class="card">
-          <span class="badge" style="background:var(--night-magenta);">qué vimos</span>
-          <h3>Aparecieron colonias</h3>
-          <p>A las 48–72 h aparecieron puntos sobre el ágar: su forma, tamaño y color nos ayudaban a identificarlos.</p>
+          <span class="badge" style="background:var(--night-green);">tiempo</span>
+          <h3>Observación progresiva</h3>
+          <p>Entre las 24 y 72 horas comenzaron a brotar puntos redondeados: cada célula individual logró duplicarse hasta formar una colonia macroscópica visible.</p>
         </div>
       </div>
 
-      <div class="ley" style="margin-top:14px;transform:rotate(-.3deg);">
-        <span class="num" style="background:var(--night-red);">!</span>
-        <p><b>Lo que cuidamos:</b> las placas estuvieron siempre <b>boca abajo</b>, para que la condensación de la tapa no goteara sobre el ágar. Solo las abríamos un segundo, a mirar.</p>
+      <div class="chips" style="margin-top:12px;">
+        <span class="chip">incubación invertida obligatoria</span>
+        <span class="chip">cero condensación sobre el gel</span>
+        <span class="chip">aparición colonial a las 48–72h</span>
       </div>
 
       <div class="foot-meta">
         <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
       </div>
-      <span class="postit" style="top:74px;right:22px;">boca abajo<br>siempre</span>
+      <span class="postit" style="bottom:64px;right:22px;">boca abajo<br>siempre</span>
     </div>
   </div>
 
-  <!-- 08 · PROBLEMAS -->
+  <!-- 07 · MICROORGANISMOS -->
   <div class="slide">
     <div class="paper">
       <span class="corner c-tl"></span><span class="corner c-tr"></span>
@@ -717,44 +651,155 @@
 
       <div class="head-row">
         <div>
-          <div class="kicker">07 · Qué pasó · reacciones</div>
-          <h1 class="slide-title">Problemas que <span class="hl m">encontramos</span></h1>
+          <div class="kicker">06 · Microbiología Ambiental y Clínica</div>
+          <h1 class="slide-title">Microorganismos: <span class="hl">tipos y especies</span></h1>
+        </div>
+        <span class="label" style="background:var(--night-blue);">clasificación científica</span>
+      </div>
+      <div class="divider"><span>los actores biológicos que encontramos en nuestro entorno</span><span class="ln"></span></div>
+
+      <div class="grid4" style="margin-top:6px;">
+        <div class="card">
+          <span class="badge" style="background:var(--night-green);">bacteria comensal</span>
+          <h3><i>Staphylococcus epidermidis</i></h3>
+          <p>Coco Gram positivo habitante normal de la piel humana y manos. Al manipular llaves se transfiere formando colonias circulares, lisas y blanquecinas en el ágar.</p>
+        </div>
+        <div class="card">
+          <span class="badge" style="background:var(--night-yellow);color:#3a2a08;">bacteria ambiental</span>
+          <h3><i>Bacillus subtilis</i></h3>
+          <p>Bacilo Gram positivo común en polvo y suciedad ambiental. Produce endosporas ultrarresistentes que sobreviven en el metal y crecen rápido con nutrientes.</p>
+        </div>
+        <div class="card">
+          <span class="badge" style="background:var(--night-red);">hongo filamentoso</span>
+          <h3><i>Penicillium chrysogenum</i></h3>
+          <p>Moho pluricelular con hifas aéreas. Colonias aterciopeladas de color verdoso o azulado que liberan esporas al aire (el moho que coloniza cajas abiertas).</p>
+        </div>
+        <div class="card">
+          <span class="badge" style="background:var(--night-magenta);">hongo unicelular</span>
+          <h3><i>Saccharomyces cerevisiae</i></h3>
+          <p>Levadura biotecnológica (pan, cerveza). Crece como colonias cremosas y abombadas; fermenta azúcares para obtener energía metabólica.</p>
         </div>
       </div>
-      <div class="divider"><span>y cómo los resolvimos</span><span class="ln"></span></div>
+
+      <div class="chips" style="margin-top:10px;">
+        <span class="chip"><i>S. epidermidis</i> (piel)</span>
+        <span class="chip"><i>B. subtilis</i> (esporas de polvo)</span>
+        <span class="chip"><i>Penicillium</i> (moho aéreo)</span>
+        <span class="chip"><b>¿Y los Virus?</b> No crecen en ágar: requieren células vivas para replicarse</span>
+      </div>
+
+      <div class="foot-meta">
+        <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
+      </div>
+      <span class="postit b" style="bottom:64px;right:22px;">¡los virus no<br>crecen en ágar!</span>
+    </div>
+  </div>
+
+  <!-- 08 · DATOS CURIOSOS 1 -->
+  <div class="slide">
+    <div class="paper">
+      <span class="corner c-tl"></span><span class="corner c-tr"></span>
+      <span class="corner c-bl"></span><span class="corner c-br"></span>
+
+      <div class="head-row">
+        <div>
+          <div class="kicker">07 · Historia y Bioquímica</div>
+          <h1 class="slide-title">Secretos del <span class="hl g">laboratorio</span></h1>
+        </div>
+        <span class="label" style="background:var(--night-green);">fundamentos históricos</span>
+      </div>
+      <div class="divider"><span>hechos históricos avalados por la microbiología clásica</span><span class="ln"></span></div>
 
       <div class="grid3" style="margin-top:6px;">
         <div class="card">
-          <span class="badge" style="background:var(--night-red);">grumos</span>
-          <h3>Se hicieron grumos</h3>
-          <p>Al echar la gelatina quedaron grumos; revolvimos 2–3 min más a fuego lento hasta que se deshicieron.</p>
+          <span class="badge" style="background:var(--night-magenta);">historia 1881</span>
+          <h3>Fannie Hesse y el pudín</h3>
+          <p>
+            Robert Koch intentaba cultivar bacterias en rodajas de papa y gelatina animal, pero a 37 °C se derretía o las bacterias se la comían. 
+            <b>Fannie Hesse</b> (esposa de su asistente) sugirió el agar-agar de algas rojas que usaba para mermeladas: hierve a 100 °C y cuaja a 40 °C.
+          </p>
         </div>
         <div class="card">
-          <span class="badge" style="background:var(--night-yellow);color:#3a2a08;">se enfrió</span>
-          <h3>Empezó a cuajar</h3>
-          <p>Al verter los últimos frascos la mezcla ya cuajaba; la recalentamos un momento y volvió a líquida.</p>
+          <span class="badge" style="background:var(--night-red);">toxicidad química</span>
+          <h3>La trampa del algodón</h3>
+          <p>
+            Los manuales de microbiología clínica (ASM) prohíben hisopos de algodón común: liberan <b>ácidos grasos libres</b> que inhiben e intoxican 
+            a bacterias sensibles. Por eso se exige poliéster, dacrón o nailon inerte.
+          </p>
         </div>
         <div class="card">
-          <span class="badge" style="background:var(--night-green);">contaminación</span>
-          <h3>Visitantes no invitados</h3>
-          <p>En una caja creció un moho en la orilla por abrir mucho la tapa; la marcamos y la separamos de las demás.</p>
+          <span class="badge" style="background:var(--night-blue);">cinética celular</span>
+          <h3>De 1 sola a 1,000,000,000</h3>
+          <p>
+            Cada punto en la placa es una UFC (Unidad Formadora de Colonia). Empezó con una única célula invisible duplicándose por fisión binaria cada 20 min: 
+            ¡en 48 h ese punto alberga cientos de millones de clones agrupados!
+          </p>
+        </div>
+      </div>
+
+      <div class="chips" style="margin-top:12px;">
+        <span class="chip">algas marinas salvaron la microbiología</span>
+        <span class="chip">ácidos grasos bacteriostáticos</span>
+        <span class="chip">duplicación exponencial 2^n</span>
+      </div>
+
+      <div class="foot-meta">
+        <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
+      </div>
+      <span class="postit" style="bottom:64px;right:22px;">¡ciencia con<br>historia real!</span>
+    </div>
+  </div>
+
+  <!-- 09 · DATOS CURIOSOS 2 -->
+  <div class="slide">
+    <div class="paper">
+      <span class="corner c-tl"></span><span class="corner c-tr"></span>
+      <span class="corner c-bl"></span><span class="corner c-br"></span>
+
+      <div class="head-row">
+        <div>
+          <div class="kicker">08 · Biomedicina y Superficies</div>
+          <h1 class="slide-title">Fómites y el azar de <span class="hl m">Fleming</span></h1>
+        </div>
+        <span class="label" style="background:var(--night-yellow);color:#3a2a08;">biomedicina</span>
+      </div>
+      <div class="divider"><span>por qué sobrevivieron en el metal y la serendipia médica</span><span class="ln"></span></div>
+
+      <div class="grid2" style="margin-top:6px;">
+        <div class="card">
+          <span class="badge" style="background:var(--night-blue);">epidemiología</span>
+          <h3>Las llaves como «Fómites» y el metal</h3>
+          <p>
+            Un fómite es un objeto inerte transmisor de patógenos. Aunque metales como el cobre y latón poseen un <b>efecto oligodinámico</b> natural 
+            (sus iones rompen membranas bacterianas), la grasa dérmica, sudor y polvo acumulados en las llaves forman un <b>escudo orgánico protector</b> 
+            que neutraliza el metal, permitiendo a <i>Staphylococcus</i> y bacilos sobrevivir intactos.
+          </p>
+        </div>
+        <div class="card">
+          <span class="badge" style="background:var(--night-green);">accidente histórico 1928</span>
+          <h3>El error que descubrió la Penicilina</h3>
+          <p>
+            Alexander Fleming descubrió el primer antibiótico de la humanidad por un descuido idéntico al de abrir una placa: 
+            se fue de vacaciones y dejó una caja de Petri mal cerrada. Al regresar, un moho contaminante (<i>Penicillium notatum</i>) había caído del aire 
+            y mataba a todas las bacterias a su alrededor. ¡La contaminación accidental transformó la medicina!
+          </p>
         </div>
       </div>
 
       <div class="chips" style="margin-top:14px;justify-content:center;">
-        <span class="chip">revolvimos hasta deshacer</span>
-        <span class="chip">recalentamos y siguió</span>
-        <span class="chip">la contaminada, aparte</span>
+        <span class="chip">efecto oligodinámico del cobre</span>
+        <span class="chip">biofilm y grasa protectora</span>
+        <span class="chip">serendipia de Fleming y la penicilina</span>
       </div>
 
       <div class="foot-meta">
         <span>INSAM · CyT II</span><span>Preparación de cajas de Petri con ágar</span>
       </div>
-      <span class="postit b" style="bottom:64px;right:22px;">¡siempre<br>se arregla!</span>
+      <span class="postit b" style="bottom:64px;right:22px;">¡un error que<br>salvó millones!</span>
     </div>
   </div>
 
-  <!-- 09 · RESULTADO FINAL / EVIDENCIA -->
+  <!-- 10 · RESULTADO FINAL / EVIDENCIA -->
   <div class="slide">
     <div class="paper">
       <span class="corner c-tl"></span><span class="corner c-tr"></span>
@@ -762,12 +807,12 @@
 
       <div class="head-row">
         <div>
-          <div class="kicker">08 · Resultado final · numeral 4</div>
+          <div class="kicker">09 · Resultado Experimental</div>
           <h1 class="slide-title">Resultado final y <span class="hl">evidencia</span></h1>
         </div>
         <span class="label" style="background:var(--night-green);">muestra real del equipo</span>
       </div>
-      <div class="divider"><span>foto tomada por nosotros — 23/09/26</span><span class="ln"></span></div>
+      <div class="divider"><span>fotografías tomadas por el equipo — 23/09/26</span><span class="ln"></span></div>
 
       <div class="ev-wrap">
         <div class="polaroid">
@@ -781,8 +826,8 @@
             <span class="badge" style="background:var(--night-green);">nuestra muestra</span>
             <h3>Bacterias de unas llaves</h3>
             <p>
-              La caja de las <b style="color:var(--fg);">llaves</b>, etiquetada con la fecha <b style="color:var(--fg);">23/09/26</b>:
-              el medio quedó firme y, después de incubar, aparecieron colonias sobre el ágar.
+              La caja de las <b>llaves</b>, etiquetada con fecha <b>23/09/26</b>: el medio casero mantuvo su firmeza y, 
+              tras incubar, proliferaron colonias circulares bien definidas sobre las líneas del hisopado.
             </p>
           </div>
 
@@ -792,7 +837,7 @@
           </div>
 
           <p class="note" style="text-align:center;">
-            Estas son las fotos del resultado final; el resto del proceso lo contamos aquí.
+            Las colonias crecieron sobre las líneas de estría, confirmando la viabilidad nutritiva de nuestro medio artesanal.
           </p>
         </div>
       </div>
@@ -803,7 +848,7 @@
     </div>
   </div>
 
-  <!-- 10 · CONCLUSIÓN -->
+  <!-- 11 · CONCLUSIÓN Y FIN -->
   <div class="slide">
     <div class="paper">
       <span class="corner c-tl"></span><span class="corner c-tr"></span>
@@ -811,44 +856,43 @@
 
       <div class="head-row">
         <div>
-          <div class="kicker">Conclusiones</div>
+          <div class="kicker">10 · Conclusiones y Cierre</div>
           <h1 class="slide-title">Lo que <span class="hl g">aprendimos</span></h1>
         </div>
         <span class="label" style="background:var(--night-blue);">fin :)</span>
       </div>
       <div class="divider"><span>equipo · 24 de septiembre de 2026</span><span class="ln"></span></div>
 
-      <p class="lede" style="max-width:70ch;">
-        Con materiales sencillos logramos un <b>medio de cultivo sólido</b> y vimos microorganismos de
-        nuestro entorno crecer: cultivar es la base para estudiarlos, identificarlos y
-        <b>diagnosticar enfermedades</b>.
+      <p class="lede" style="max-width:72ch;">
+        Con materiales cotidianos reprodujimos con éxito los principios fundamentales de la microbiología. 
+        Cultivar microorganismos es el primer paso indispensable para estudiarlos, identificarlos y diagnosticar enfermedades.
       </p>
 
       <div class="grid3" style="margin-top:4px;">
         <div class="card">
           <span class="badge" style="background:var(--night-green);">1</span>
-          <h3>Funcionó</h3>
-          <p>Agua + caldo + gelificante = medio sólido real y colonias visibles, sin laboratorio.</p>
+          <h3>Metabolismo accesible</h3>
+          <p>Agua, peptonas de caldo y gelificante aportaron carbono, nitrógeno y sales asimilables suficientes para sustentar el ciclo celular microbiano.</p>
         </div>
         <div class="card">
           <span class="badge" style="background:var(--night-cyan);">2</span>
-          <h3>La clave</h3>
-          <p>Todo limpio y boca abajo: donde abrimos de más, llegó la contaminación.</p>
+          <h3>Asepsia rigurosa</h3>
+          <p>El hisopo de poliéster, la desinfección térmica y la incubación invertida fueron la clave para aislar colonias y evitar contaminaciones.</p>
         </div>
         <div class="card">
           <span class="badge" style="background:var(--night-magenta);">3</span>
-          <h3>Sirve para algo</h3>
-          <p>Medicina, alimentos y ambiente dependen de saber cultivar microbios.</p>
+          <h3>Relevancia real</h3>
+          <p>Comprender el cultivo microbiano es la base de la biotecnología moderna: antibiogramas médicos, desarrollo de vacunas e industria alimentaria.</p>
         </div>
       </div>
 
       <div class="chips" style="margin-top:12px;">
-        <span class="chip">Referencia: material de lectura INSAM · CyT II · Tema 01</span>
-        <span class="chip">Consulta: medios de cultivo e hisopado</span>
+        <span class="chip">Microbiología y Biotecnología Aplicada</span>
+        <span class="chip">Protocolo aséptico y cultivo de superficies</span>
       </div>
 
       <div class="foot-meta">
-        <span>Equipo: Jonathan Valle · Anderson Raymundo · Bryan Monge · Daniel Ramírez</span>
+        <span>Equipo: Steven López · Bryan Monge · Anderson Raymundo · Daniel Ramírez · Jonathan Valle</span>
         <span>¡Gracias! — INSAM · Ciencia y Tecnología II</span>
       </div>
 
@@ -860,7 +904,7 @@
 
 <div class="nav-controls">
   <button class="nav-btn" onclick="prevSlide()" aria-label="Anterior">&#8592;</button>
-  <span class="slide-counter"><span id="current">1</span> / <span id="total">10</span></span>
+  <span class="slide-counter"><span id="current">1</span> / <span id="total">11</span></span>
   <button class="nav-btn" onclick="nextSlide()" aria-label="Siguiente">&#8594;</button>
 </div>
 
